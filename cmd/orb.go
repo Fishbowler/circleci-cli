@@ -1314,7 +1314,7 @@ func initOrb(opts orbOptions) error {
 		return err
 	}
 
-	namespace := ownerName
+	namespace := strings.ToLower(ownerName)
 	if opts.cfg.OrbPublishing.DefaultNamespace != "" {
 		namespace = opts.cfg.OrbPublishing.DefaultNamespace
 	}
