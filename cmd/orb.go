@@ -1319,7 +1319,7 @@ func initOrb(opts orbOptions) error {
 		namespace = opts.cfg.OrbPublishing.DefaultNamespace
 	}
 	iprompt = &survey.Input{
-		Message: "Enter the namespace to use for this orb",
+		Message: "Enter the namespace to use for this orb. This groups your orbs, and forms part of the reference to your orb, e.g. mynamespace/myorb@1.0.0",
 		Default: namespace,
 	}
 	err = survey.AskOne(iprompt, &namespace)
